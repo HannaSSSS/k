@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+
+
+
+
+bool b(int num){
+for(int j=1;j<46;j++)
+		for(int k=1;k<46;k++)
+			for(int l=1;l<46;l++)
+				if(j*(j+1)/2+k*(k+1)/2+l*(l+1)/2==num)
+				return true;
+	
+	
+	
+				return false;
+			}
+					
+int main(){
+	
+	
+//	b();
+	int a,c;
+	cin>>a;
+	for(int p=0;p<a;p++){
+		cin>>c;
+		
+		if(b(c))
+		cout<<1<<endl;
+		else
+		cout<<0<<endl;
+		
+		
+	}
+	
+
+	return 0;
+}
