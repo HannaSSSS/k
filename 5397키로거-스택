@@ -1,0 +1,71 @@
+#include <iostream>
+#include <algorithm>
+#include <utility>
+#include <queue>
+#include <string>
+#include <stack>
+#include <cmath>
+#include <map>
+#include <vector>
+using namespace std;
+					
+int main(){
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+
+int n;
+cin>>n;
+
+
+for(int i=0;i<n;i++){
+string input;
+cin>>input;
+stack<char> a,b;//
+
+for(int j=0;j<input.length();j++){
+
+
+if(input[j]=='<'){
+if(!a.empty()){//
+	b.push(a.top());
+	a.pop();
+}
+}
+else if(input[j]=='>'){
+	if(!b.empty()){
+	
+	a.push(b.top());
+	b.pop();
+}
+}
+else if(input[j]=='-'){
+if (!a.empty())
+	a.pop();	//조건문 하나 더 넣어야 하는지 
+}
+else{
+a.push(input[j]);
+}
+}
+
+while(!b.empty()){
+
+a.push(b.top());
+b.pop();
+}
+vector<char> v;
+while(!a.empty()){
+	v.push_back(a.top());
+	a.pop();
+	
+}
+
+reverse(v.begin(),v.end());
+for(int k=0;k<v.size();k++){
+	cout<<v[k];
+}
+
+
+cout<<endl;
+}
+	return 0;
+}
