@@ -1,0 +1,46 @@
+#include <iostream>
+#include <algorithm>
+#include <utility>
+#include <queue>
+#include <string>
+#include <stack>
+#include <cmath>
+#include <map>
+#include <vector>
+#include <iomanip>
+using namespace std;
+
+
+
+
+
+
+
+int main(){
+
+
+int a,b,c;
+int sum=0;
+while(1){
+	cin>>a>>b>>c;
+	
+	if(a==0)
+	break;
+	int z=c/b;
+	
+
+	
+	int v=z*b;
+	sum++;
+	
+	if(c%b>a)
+	printf("Case %d: %d\n",sum,(v-(z*(b-a)))+a);
+	else
+	printf("Case %d: %d\n",sum,(v-(z*(b-a)))+c%b);
+
+	
+	
+	
+}
+	return 0;
+}
