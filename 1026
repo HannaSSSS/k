@@ -1,0 +1,43 @@
+#include <iostream>
+#include <algorithm>
+#include <utility>
+#include <queue>
+#include <string>
+#include <stack>
+#include <cmath>
+#include <map>
+#include <vector>
+#include <iomanip>
+#include <cstdio>
+using namespace std;
+
+
+int main(){
+
+int n;
+cin>>n;
+int a[50];
+int b[50];
+
+
+for(int i=0;i<n;i++){
+	cin>>a[i];
+}
+for(int i=0;i<n;i++){
+	cin>>b[i];
+}
+sort(a, a + n);
+sort(b, b + n, greater<>());
+
+
+
+int sum=0;
+for(int i=0;i<n;i++){
+	sum+=a[i]*b[i];
+	
+}
+cout<<sum<<endl;
+
+	return 0;
+}
+
