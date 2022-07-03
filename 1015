@@ -1,0 +1,48 @@
+#include <iostream>
+#include <algorithm>
+#include <utility>
+#include <queue>
+#include <string>
+#include <stack>
+#include <cmath>
+#include <map>
+#include <vector>
+#include <iomanip>
+#include <cstdio>
+using namespace std;
+
+
+int main(){
+
+int n;
+cin>>n;
+pair<int,int> arr[n];
+int arr2[n];
+
+
+for(int i=0;i<n;i++){
+	int a;
+	cin>>a;
+arr[i]=make_pair(a,i);
+}
+
+sort(arr,arr+n);
+
+
+
+for(int i=0;i<n;i++){
+	arr2[arr[i].second]=i;
+}
+
+for(int i=0;i<n;i++){
+	
+	cout<<arr2[i]<<" ";
+	
+}
+
+
+
+
+
+	return 0;
+}
